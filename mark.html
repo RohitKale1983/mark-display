@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Marks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Student Marks</h1>
+    <form id="marks-form" onsubmit="return validateForm()">
+      <label for="rollno">Roll Number:</label>
+      <input type="text" id="rollno" name="rollno" placeholder="Enter your Roll Number">
+      <label for="mothername">Mother's Name:</label>
+      <input type="text" id="mothername" name="mothername" placeholder="Enter your Mother's Name">
+      <label for="year">Year:</label>
+      <div class="radio-group">
+        <input type="radio" id="second-year" name="year" value="second-year" onclick="showSemesterOptions()">
+        <label for="second-year">Second Year</label>
+        <input type="radio" id="third-year" name="year" value="third-year" onclick="showSemesterOptions()">
+        <label for="third-year">Third Year</label>
+        <input type="radio" id="fourth-year" name="year" value="fourth-year" onclick="showSemesterOptions()">
+        <label for="fourth-year">Fourth Year</label>
+      </div>
+
+      <label for="semester">Semester:</label>
+      <select id="semester" name="semester">
+        <option id="third-sem" value="third-sem" style="display: none;">Third Semester</option>
+        <option id="fourth-sem" value="fourth-sem" style="display: none;">Fourth Semester</option>
+        <option id="fifth-sem" value="fifth-sem" style="display: none;">Fifth Semester</option>
+        <option id="sixth-sem" value="sixth-sem" style="display: none;">Sixth Semester</option>
+        <option id="seventh-sem" value="seventh-sem" style="display: none;">Seventh Semester</option>
+        <option id="eighth-sem" value="eighth-sem" style="display: none;">Eighth Semester</option>
+      </select>
+      <label for="testtype">Test Type:</label>
+      <div class="select-wrapper">
+        <select id="testtype" name="testtype">
+          <option value="unit1">Unit Test 1</option>
+          <option value="unit2">Unit Test 2</option>
+          <option value="insem">Insem</option>
+        </select>
+      </div>
+      
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="marks-display"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
